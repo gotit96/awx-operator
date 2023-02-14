@@ -17,3 +17,9 @@
       {{ _custom_init_container_image |
          default(lookup('env', 'RELATED_IMAGE_AWX_INIT_CONTAINER')) |
          default(_default_init_container_image, true) }}
+
+- name: Set user provided image for projects persistence PVC init tasks
+  set_fact:
+    _init_projects_container_image: "{{ init_projects_container_image }}"
+  when:
+    - init_projects_container_image | default([]) | length

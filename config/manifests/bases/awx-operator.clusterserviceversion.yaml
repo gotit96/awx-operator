@@ -226,7 +226,7 @@ spec:
         path: ingress_api_version
         x-descriptors:
         - urn:alm:descriptor:com.tectonic.ui:advanced
-        - urn:alm:descriptor:com.tectonic.ui:text 
+        - urn:alm:descriptor:com.tectonic.ui:text
       - displayName: Ingress Path
         path: ingress_path
         x-descriptors:
@@ -307,6 +307,11 @@ spec:
       - displayName: Image Pull Secret (Deprecated)
         path: image_pull_secret
         x-descriptors:
+        - urn:alm:descriptor:com.tectonic.ui:hidden
+      - displayName: Image used for projects persistence PVC init tasks
+        path: init_projects_container_image
+        x-descriptors:
+        - urn:alm:descriptor:com.tectonic.ui:advanced
         - urn:alm:descriptor:com.tectonic.ui:hidden
       - displayName: Web Container Resource Requirements
         path: web_resource_requirements

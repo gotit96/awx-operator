@@ -578,6 +578,9 @@ spec:
               image_pull_secret:  # deprecated
                 description: (Deprecated) Image pull secret for app and database containers
                 type: string
+              init_projects_container_image:
+                description: Registry path to the container image used for projects persistence PVC init tasks
+                type: string
               task_resource_requirements:
                 description: Resource requirements for the task container
                 properties:
